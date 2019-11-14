@@ -1,0 +1,60 @@
+<script type="text/javascript" src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="../../js/popper.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	
+<script type="text/javascript">
+		$(document).ready(function(){
+			limpiar();
+			
+			$('#guardar').on('click', function(){
+				var codigo = $('#nue').val();
+				var salario = $('#salario').val();
+				var plaza = $('#plaza').val();
+				var error = false;
+				
+				if(codigo.length <= 4){
+					$('#msg').text("Longitud minima 5 caracteres");
+					//$('.alert').show();
+					error = true;
+				}else
+					limpiar();
+				
+				//validacion de salario
+				switch (plaza) {
+					case "1"://programador
+						if (salario > 900) {
+							$('#msg').text("La plaza Programador no debe ganar mas de $900");
+							error = true;
+						}
+						break;
+					case "6"://diseño
+						if (salario > 700) {
+							$('#msg').text("La plaza Diseño no debe ganar mas de $700");
+							error = true;
+						}
+						break;
+					case "3"://Marketing
+						if (salario > 500) {
+							$('#msg').text("La plaza Marketing no debe ganar mas de $500");
+							error = true;
+						}
+						break;
+					default:
+						break;
+				}
+				
+				if (error) 
+					$('.alert').show();
+				else
+					$('#formId').submit();
+				
+			});
+			
+			//Funcion para limpiar mensaje de error
+			function limpiar(){
+				$('#msg').text("");
+				$('.alert').hide();
+				
+			}
+		});
+</script>
