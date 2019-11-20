@@ -23,4 +23,6 @@ public class UsuariosController {
 		List<Usuarios> lista = us.listarTodo();
 		return lista;
 	}
+	
+	//buscar por ID
 }
