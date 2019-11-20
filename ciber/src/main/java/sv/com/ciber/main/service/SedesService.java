@@ -18,7 +18,7 @@ import sv.com.ciber.main.repository.ISedesRepository;
 
 @Service
 @Transactional
-public class SedeService {
+public class SedesService {
 	
 	@Autowired
 	ISedesRepository rSedes;
@@ -26,27 +26,35 @@ public class SedeService {
 	@Autowired
 	IMunicipiosRepository rMuni;
 	
-	public List<Sedes> lista(){
-		return (List<Sedes>) rSedes.findAll();
+	//Lista Sedes
+	public List<Sedes> findAll(){
+		List<Sedes> lista = (List<Sedes>) rSedes.findAll();
+		return lista;
 	}
 	
-	public void eliminar(Integer id) {
-		rSedes.deleteById(id);
-	}
-	
-	public Sedes getSedesById(Integer id) {
+	//Buscar Sede por ID
+	public Sedes findSedesById(Integer id) {
 		return rSedes.findById(id).get();
 	}
 	
-	public void guardar(Sedes sedes) {
+	//Eliminar por ID
+	public void deleteById(Integer id) {
+		rSedes.deleteById(id);
+	}
+	
+	//Guardar Sedes
+	public void save(Sedes sedes) {
 		rSedes.save(sedes);
 	}
 	
+	//Lista Municipios
 	public List<Municipios> listaMuni(){
-		return (List<Municipios>) rMuni.findAll();
+		 List<Municipios> lista = (List<Municipios>) rMuni.findAll();
+		 return lista;
 	}
 	
-	public Municipios getMuiById(Integer id) {
+	//Obtener Municipios por ID
+	public Municipios getMuniById(Integer id) {
 		return rMuni.findById(id).get();
 	}
 }
