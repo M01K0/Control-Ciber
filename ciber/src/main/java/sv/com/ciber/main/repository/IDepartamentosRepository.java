@@ -1,3 +1,7 @@
+	//Autor: William Valdez
+	//Fecha: 12/11/2019
+	//Descripción: Repositorio Departamentos
+
 package sv.com.ciber.main.repository;
 
 import org.springframework.data.repository.CrudRepository;

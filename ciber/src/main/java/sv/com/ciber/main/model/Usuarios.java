@@ -1,3 +1,7 @@
+	//Autor: William Valdez
+	//Fecha: 12/11/2019
+	//Descripción: Entidad Usuarios
+
 package sv.com.ciber.main.model;
 
 import javax.persistence.Entity;
@@ -16,6 +20,8 @@ public class Usuarios {
 	private String usuario;
 	private String clave;
 	private String rol;
+	
+	//Getter and Setter
 	
 	public Integer getId() {
 		return id;

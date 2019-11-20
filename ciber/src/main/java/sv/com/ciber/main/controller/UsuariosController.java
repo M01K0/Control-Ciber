@@ -1,4 +1,4 @@
-package sv.com.ciber.main.controller;
+ package sv.com.ciber.main.controller;
 
 import java.util.List;
 

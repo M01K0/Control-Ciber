@@ -1,3 +1,7 @@
+	//Autor: William Valdez
+	//Fecha: 12/11/2019
+	//Descripción: Entidad Municipios
+
 package sv.com.ciber.main.model;
 
 import javax.persistence.Entity;
@@ -24,6 +28,8 @@ public class Municipios {
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	private Departamentos id_dep;
 
+	//Getter and Setter
+	
 	public Integer getId() {
 		return id;
 	}

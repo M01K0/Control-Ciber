@@ -1,3 +1,7 @@
+	//Autor: William Valdez
+	//Fecha: 12/11/2019
+	//Descripción: Entidad Sedes
+
 package sv.com.ciber.main.model;
 
 import javax.persistence.Entity;
@@ -27,6 +31,8 @@ public class Sedes {
 	@JoinColumn(name = "id_muni")
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	private Municipios id_muni;
+	
+	//Getter and Setter
 
 	public Integer getId() {
 		return id;

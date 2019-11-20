@@ -1,3 +1,7 @@
+	//Autor: William Valdez
+	//Fecha: 12/11/2019
+	//Descripción: Entidad Departamentos
+
 package sv.com.ciber.main.model;
 
 import javax.persistence.Entity;
@@ -14,6 +18,8 @@ public class Departamentos {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nombre;
+	
+	//Getter and Setter
 	
 	public Integer getId() {
 		return id;

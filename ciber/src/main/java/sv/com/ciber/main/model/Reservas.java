@@ -1,3 +1,7 @@
+	//Autor: William Valdez
+	//Fecha: 12/11/2019
+	//Descripción: Entidad Reservas
+
 package sv.com.ciber.main.model;
 
 import java.util.Date;
@@ -29,6 +33,8 @@ public class Reservas {
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	private Equipos id_equipo;
 
+	//Getter and Setter
+	
 	public Integer getId() {
 		return id;
 	}
