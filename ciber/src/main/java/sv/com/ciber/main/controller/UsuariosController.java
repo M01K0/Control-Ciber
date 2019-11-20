@@ -17,6 +17,7 @@ public class UsuariosController {
 	@Autowired
 	UsuariosService us;
 	
+	//listar usuarios
 	@GetMapping
 	public List<Usuarios> lista(){
 		List<Usuarios> lista = us.listarTodo();
