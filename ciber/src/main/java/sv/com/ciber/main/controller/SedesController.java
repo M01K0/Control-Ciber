@@ -48,6 +48,8 @@ public class SedesController {
 		sSedes.save(sedes);
 	}
 
+	
+	//Métodos para Municipios
 	@GetMapping("/municipios")
 	public List<Municipios> listaMunicipios(){
 		return (List<Municipios>) sSedes.listaMuni();
