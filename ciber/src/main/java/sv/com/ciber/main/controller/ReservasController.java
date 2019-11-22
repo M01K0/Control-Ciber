@@ -1,3 +1,6 @@
+	//Autor: Kenia Rosales
+	//Fecha: 17/11/2019
+	//Descripción: Reservas Controlador
 package sv.com.ciber.main.controller;
 
 import java.util.List;
@@ -12,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import sv.com.ciber.main.model.Equipos;
 import sv.com.ciber.main.model.Reservas;
+import sv.com.ciber.main.model.Usuarios;
 import sv.com.ciber.main.service.ReservasService;
 
 @RestController
@@ -48,5 +53,24 @@ public class ReservasController {
 	}
 
 	//Métodos para usuario
+	@GetMapping("/usuarios")
+	public List<Usuarios> listaU(){
+		return (List<Usuarios>) sReservas.findAllUsuarios();
+	}
 	
+	@GetMapping("/usuarios/{id}")
+	public Usuarios getByIdU(@PathVariable Integer id) {
+		return sReservas.findByIdUsuarios(id);
+	}
+	
+	//Métodos para Equipo
+	@GetMapping("/equipos")
+	public List<Equipos> listaE(){
+		return (List<Equipos>) sReservas.findAllEquipo();
+	}
+	
+	@GetMapping("/equipos/{id}")
+	public Equipos getEById(Integer id) {
+		return sReservas.findByEquipos(id);
+	}
 }
