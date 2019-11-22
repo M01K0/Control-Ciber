@@ -1,3 +1,6 @@
+	//Autor: Kenia Rosales
+	//Fecha: 17/11/2019
+	//Descripción: Equipo Controlador
 package sv.com.ciber.main.controller;
 
 import java.util.List;
